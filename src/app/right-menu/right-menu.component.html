@@ -1,0 +1,93 @@
+<mat-sidenav-container class="example-containers" [style.width.px]="width">
+    <mat-sidenav
+       class="sideNavMainStyles"
+       #sidenavs
+       mode="side"
+       [(opened)]="opened"
+       (opened)="events.push('open!')"
+       (closed)="events.push('close!')"
+       [style.width.px]="width"
+    >
+       <!-- here is the comments popup-->
+       <div class="component-each-style" *ngIf="openedSection==false" (click)="widthAdjust()">
+          <p class="marginZero"><i class="material-icons">message</i></p>
+          <p class="marginZero font-size-elements">Section Comment</p>
+       </div>
+       <div class="component-each-style" *ngIf="openedSection==false">
+          <p class="marginZero"><i class="fa fa-users"></i></p>
+          <p class="marginZero font-size-elements">Committee Roster</p>
+       </div>
+       <div class="component-each-style" *ngIf="openedSection==false">
+          <p class="marginZero"><i class="fa fa-folder"></i></p>
+          <p class="marginZero font-size-elements">Work Area</p>
+       </div>
+       <div class="component-each-style" *ngIf="openedSection==false">
+          <p class="marginZero"><i class="fa fa-crosshairs"></i></p>
+          <p class="marginZero font-size-elements">Committee Details</p>
+       </div>
+ 
+       <!-- expansion panels are starts -->
+ 
+       <mat-accordion *ngIf="openedSection==true">
+          <mat-expansion-panel expanded="0">
+             <mat-expansion-panel-header>
+                <mat-panel-title>
+                   <mat-icon style="color: #fff;">done</mat-icon>
+                </mat-panel-title>
+                <mat-panel-description>
+                   Section Comments
+                </mat-panel-description>
+             </mat-expansion-panel-header>
+             <!-- <lib-comments></lib-comments> -->
+          </mat-expansion-panel>
+          <mat-expansion-panel>
+             <mat-expansion-panel-header>
+                <mat-panel-title>
+                   <mat-icon style="color: #fff;">done</mat-icon>
+                </mat-panel-title>
+                <mat-panel-description>
+                   Committee Roster
+                </mat-panel-description>
+             </mat-expansion-panel-header>
+             <mat-card>
+                <div style="display: inline-block;">
+                   <mat-icon>account_circle</mat-icon>
+                </div>
+                <div style="display: inline-block;">
+                   <h4>Ryan Soni</h4>
+                   <p>Novelist</p>
+                   <p>Diagnostics</p>
+                </div>
+             </mat-card>
+          </mat-expansion-panel>
+          <mat-expansion-panel disabled="true">
+             <mat-expansion-panel-header>
+                <mat-panel-title>
+                   <mat-icon>done</mat-icon>
+                </mat-panel-title>
+                <mat-panel-description>
+                   Work area
+                </mat-panel-description>
+             </mat-expansion-panel-header>
+             <!-- <lib-comments></lib-comments> -->
+          </mat-expansion-panel>
+          <mat-expansion-panel disabled="true">
+             <mat-expansion-panel-header>
+                <mat-panel-title>
+                   <mat-icon>done</mat-icon>
+                </mat-panel-title>
+                <mat-panel-description>
+                   Committee Details
+                </mat-panel-description>
+             </mat-expansion-panel-header>
+             <!-- <lib-comments></lib-comments> -->
+          </mat-expansion-panel>
+       </mat-accordion>
+    </mat-sidenav>
+ </mat-sidenav-container>
+ <button mat-button class="openCloseButtons" (click)="sidenavs.toggle()">
+    <mat-icon *ngIf="opened == false">chevron_right</mat-icon>
+    <mat-icon *ngIf="opened == true">chevron_left</mat-icon>
+    <span *ngIf="opened == true">Hide</span>
+ </button>
+ 

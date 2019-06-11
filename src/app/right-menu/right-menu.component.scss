@@ -1,0 +1,39 @@
+.example-containers {
+    position: absolute;
+  top: 115px;
+  bottom: 35px;
+  right: 0;
+  background-color: transparent;
+}
+
+.openCloseButtons {
+    background-color: #005195;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    z-index: 100;
+    width: 95px;
+    border-radius: 0px;
+    // left: 0;
+    right: 0;
+}
+
+mat-sidenav.sideNavMainStyles {
+    background-color: #005195;
+}
+
+.modal-header{
+  color:#fff;
+}
+
+.component-each-style {
+  background-color: #005195;
+    text-align: center;
+    color: #fff;
+    border-bottom: 1px solid #fff;
+    padding: 8px;
+}
+
+.marginZero {
+  margin-bottom: 0px;
+}

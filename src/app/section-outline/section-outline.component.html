@@ -1,0 +1,59 @@
+<!-- <mat-sidenav-container class="example-container" [style.width.px]="width">
+  <mat-sidenav class="sideNavMainStyle" #sidenav mode="side" [(opened)]="opened" (opened)="events.push('open!')"
+    (closed)="events.push('close!')" [style.width.px]="width">
+    <p class="marginZero seciontHeading text-center" (click)="widthAdjust()">Section Outline</p>
+    <i class="fa fa-chevron-left" style="float: right;"></i>
+    <table *ngIf="openedSection==false" class="table-custom-section">
+      <tr *ngFor="let SL of SectionsList;index as SLI;">
+        <td class="text-center number-td">
+          <div [class.vertical-line-style-not]="SLI!==SectionsList.length-1"></div>
+          <span class="number-round-style-not">{{SL.number}}</span>
+        </td>
+      </tr>
+    </table>
+    <table *ngIf="openedSection==true" class="table-custom-section">
+      <tr *ngFor="let SL of SectionsList;index as SLI;">
+        <td class="text-center">
+          <span class="number-round-style">{{SL.number}}</span></td>
+        <div [class.vertical-line-style]="SLI!==SectionsList.length-1" class="vertical-line-styles"></div>
+
+        <td class="paddingTen">
+          <p class="marginZero">{{SL.text}}</p>
+          <span style="float: right;">{{SL.section_assigned}}</span>
+        </td>
+      </tr>
+    </table>
+  </mat-sidenav>
+</mat-sidenav-container>
+ -->
+
+<div class="sideNavMainStyle" *ngIf="opened" [style.width.px]="width">
+  <p class="marginZero seciontHeading text-center" (click)="widthAdjust()">Section Outline</p>
+  <i class="fa fa-chevron-left" style="float: right;"></i>
+  <table *ngIf="openedSection==false" class="table-custom-section">
+    <tr *ngFor="let SL of SectionsList;index as SLI;">
+      <td class="text-center number-td" (click)="sectionSelection(SL,SLI)">
+        <div [class.vertical-line-style-not]="SLI!==SectionsList.length-1"></div>
+        <span class="number-round-style-not">{{SL.number}}</span>
+      </td>
+    </tr>
+  </table>
+  <table *ngIf="openedSection==true" class="table-custom-section">
+    <tr *ngFor="let SL of SectionsList;index as SLI;" (click)="sectionSelection(SL,SLI)">
+      <td class="text-center">
+        <span class="number-round-style">{{SL.number}}</span></td>
+      <div [class.vertical-line-style]="SLI!==SectionsList.length-1" class="vertical-line-styles"></div>
+
+      <td>
+        <p class="marginZero">{{SL.text}}</p>
+        <span style="float: right;" *ngIf="SL.section_assigned==true">Section Assigned</span>
+        <span style="float: right;" *ngIf="SL.section_assigned==false"></span>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<button mat-button class="openCloseButton" (click)="onMethods()">
+  <mat-icon *ngIf="opened == false">chevron_right</mat-icon>
+  <mat-icon *ngIf="opened == true">chevron_left</mat-icon> <span *ngIf="opened == true">Hide</span>
+</button>

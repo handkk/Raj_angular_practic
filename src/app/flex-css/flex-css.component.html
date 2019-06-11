@@ -1,0 +1,23 @@
+<p>
+  flex-css works!
+</p>
+<div class="flex-container">
+  <div class="first">1 Angular flex layout learning in the responsive way. Angular flex layout learning in the responsive way. Angular flex layout learning in the responsive way.</div>
+  <div class="second">
+    <div class="online-edit">
+      <div class="online-edit-child-one">
+        <span class="number-style">1</span>
+      </div>
+      <div class="online-edit-child-two">
+        <p class="heading">First Document First Document First Document First Document First Document First Documentv First Document First Document First Document First Document</p>
+      </div>
+      <div class="online-edit-child-three">
+        <mat-icon>clear</mat-icon>
+      </div>
+    </div>
+    <file-drop dropZoneLabel="Drop files here" (onFileDrop)="dropped($event)">
+        <span>optional content (don't set dropZoneLabel then)</span>
+    </file-drop>
+  </div>
+  <div [class.third]="clicked==false" [class.third-responsive]="clicked==true" (click)="increaseWidth()">3 Angular flex layout learning in the responsive way.</div>  
+</div>

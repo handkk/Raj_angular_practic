@@ -1,0 +1,108 @@
+<!-- material stepper component, here we have 3 forms in the stepper-->
+<h1 mat-dialog-title class="modal-head">Upload Documents <button mat-button mat-dialog-close style="float: right;">
+    <mat-icon>clear</mat-icon>
+  </button></h1>
+<div mat-dialog-content>
+  <mat-horizontal-stepper #stepper>
+    <!--1st stepper form to upload the file-->
+    <mat-step [stepControl]="firstFormGroup">
+      <form [formGroup]="firstFormGroup">
+        <ng-template matStepLabel>Upload</ng-template>
+        <table style="width: 100%;">
+          <tr>
+            <td style="padding-right: 10px;">
+              <h4 style="margin: 0 0 10px 0;">Instructions</h4>
+              <p class="int-list">1. Select your document to upload</p>
+              <p class="int-list">2. Add Notes for Sponsor</p>
+              <p class="int-list">3. Submit your document for approval</p>
+            </td>
+            <td>
+              <file-drop dropZoneLabel="Drop files here" (onFileDrop)="dropped($event)" (onFileOver)="fileOver($event)"
+                (onFileLeave)="fileLeave($event)">
+                <mat-icon>create_new_folder</mat-icon>
+                <!-- <p>Drop Documents Here</p> -->
+              </file-drop>
+              <div id="input_container">
+                <input type="file" />
+                <!-- <input type="text" id="input" placeholder="*AttachFile" value /> -->
+              </div>
+              <p style="margin-bottom: 0px;">{{ fileName }}</p>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <div style="float: right;">
+                <button mat-button matStepperNext disabled>Back</button>
+                <button mat-button matStepperNext [disabled]="firstFormGroup.value.file == ''">
+                  Next
+                </button>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </form>
+    </mat-step>
+
+    <!-- 2nd stepper form to add comments to the upload-->
+    <mat-step [stepControl]="secondFormGroup">
+      <form [formGroup]="secondFormGroup">
+        <ng-template matStepLabel>Comment</ng-template>
+        <table style="width: 100%;">
+          <tr>
+            <td style="padding-right: 10px;">
+              <h4 style="margin: 0 0 10px 0;">Instructions</h4>
+              <p class="int-list">1. Select your document to upload</p>
+              <p class="int-list">2. Add Notes for Sponsor</p>
+              <p class="int-list">3. Submit your document for approval</p>
+            </td>
+            <td>
+              <mat-form-field>
+                <input matInput placeholder="Author notes" formControlName="secondCtrl" required /></mat-form-field>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <div style="float: right;">
+                <button mat-button matStepperPrevious>Back</button>
+                <button mat-button matStepperNext [disabled]="secondFormGroup.value.secondCtrl == ''">
+                  Next
+                </button>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </form>
+    </mat-step>
+
+    <!-- 3rd stepper form to submit -->
+    <mat-step>
+      <ng-template matStepLabel>Submit</ng-template>
+      <table style="width: 100%;">
+        <tr>
+          <td style="padding-right: 10px;width: 50%;">
+            <h4 style="margin: 0 0 10px 0;">Instructions</h4>
+            <p class="int-list">1. Select your document to upload</p>
+            <p class="int-list">2. Add Notes for Sponsor</p>
+            <p class="int-list">3. Submit your document for approval</p>
+          </td>
+          <td style="width: 30%;text-align: center;">
+            <mat-icon style="font-size: 100px;">thumb_up</mat-icon>
+          </td>
+        </tr>
+        <!-- for the Back / Next buttons on the right -->
+        <tr>
+          <td colspan="2">
+            <div style="float: right;">
+              <button mat-button matStepperPrevious>Back</button>
+              <button mat-button (click)="stepper.reset()">Submit</button>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </mat-step>
+  </mat-horizontal-stepper>
+</div>
+<!-- <div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+  <button mat-butto>Ok</button>
+</div> -->

@@ -1,0 +1,224 @@
+// // .example-card{
+// //     width: 80%;
+// //     margin: auto;
+// //     // height: 360px;
+// // }
+
+// // .submit-btn{
+// //     margin-left: 2%;
+// // }
+
+// // .card-title{
+// //     border: 1px solid;
+// // //   box-shadow: 1px 1px;
+// // }
+// // .roundtext{
+// //     line-height: 1.6;
+// //     height: 25px;
+// //     width: 25px;
+// //     background-color: darkblue;
+// //     color:#ffffff !important;
+// //     border-radius: 50%;
+// //     display: inline-block;
+// //     padding-left: 7px;
+// //     padding-right: 10px;
+// //     font-size: 16px;
+// // }
+// // .mat-card-header{
+// //     border-bottom: 1px solid rgba(0,0,0,.2);
+// // }
+// // .padleftright{
+// //     padding-left: 0 !important;
+// //     width: 2.333333% !important;
+// //     flex: 0 0 2.333333% !important;
+// //     max-width: 2.333333% !important;
+// // }
+
+// // // dropdown start
+// // .dropdownwrap .dropdownbtn{
+// //     background: transparent;
+// //     border:none !important;
+// // }
+// // .dropdownwrap .fa{
+// // color:blue;
+// // }
+// // .dropdownbtn:focus{
+// //     border:none !important;
+// // }
+// // .dropdownwrap .dropdown-menu {
+// //     left: -125px !important;
+// // }
+
+// // .dropdownwrap .dropdown-toggle:after { content: none }
+// // //dropdown end
+
+// // .input-element{
+// //     width: 100%;
+// //     border: none;
+// //     border-bottom: 1px solid grey;
+// //     margin-bottom: 10%;
+// // }
+
+// // .ck-align{
+// //     margin-top:10px;
+// // }
+
+
+
+
+// // #input_container {
+// //     position:relative;
+// // margin-top:20px;
+// // }
+// // #input {
+// //     width: 100%;
+// //     border: none;
+// //     border-bottom: 1px solid grey;
+// //     // margin-bottom: 10%;
+// // }
+// // #input_img {
+// //     position:absolute;
+// //     bottom:2px;
+// //     right:5px;
+// //     width:24px;
+// //     height:24px;
+// // }
+
+
+
+
+// // new scss from ckeditor:
+// .example-card{
+//     width: 80%;
+//     margin: auto;
+//     // height: 360px;
+// }
+
+// .submit-btn{
+//     margin-left: 2%;
+// }
+
+// .card-title{
+//     border: 1px solid;
+// //   box-shadow: 1px 1px;
+// }
+// .roundtext{
+//     line-height: 1.6;
+//     height: 25px;
+//     width: 25px;
+//     background-color: darkblue;
+//     color:#ffffff !important;
+//     border-radius: 50%;
+//     display: inline-block;
+//     padding-left: 7px;
+//     padding-right: 10px;
+//     font-size: 16px;
+// }
+// .mat-card-header{
+//     border-bottom: 1px solid rgba(0,0,0,.2);
+// }
+// .padleftright{
+//     padding-left: 0 !important;
+//     width: 2.333333% !important;
+//     flex: 0 0 2.333333% !important;
+//     max-width: 2.333333% !important;
+// }
+
+// // dropdown start
+// .dropdownwrap .dropdownbtn{
+//     background: transparent;
+//     border:none !important;
+// }
+// .dropdownwrap .fa{
+// color:blue;
+// }
+// .dropdownbtn:focus{
+//     border:none !important;
+// }
+// .dropdownwrap .dropdown-menu {
+//     left: -125px !important;
+// }
+
+// .dropdownwrap .dropdown-toggle:after { content: none }
+// //dropdown end
+
+// .input-element{
+//     width: 100%;
+//     border: none;
+//     border-bottom: 1px solid grey;
+//     margin-bottom: 10%;
+// }
+
+// .ck-align{
+//     margin-top:10px;
+// }
+
+
+
+
+// #input_container {
+//     position:relative;
+// margin-top:20px;
+// }
+// #input {
+//     width: 100%;
+//     border: none;
+//     border-bottom: 1px solid grey;
+//     // margin-bottom: 10%;
+// }
+// #input_img {
+//     position:absolute;
+//     bottom:2px;
+//     right:5px;
+//     width:24px;
+//     height:24px;
+// }
+
+// // css grid
+
+// .main-head {
+//     grid-area: header;
+//     border: 1px solid #000;
+//   }
+//   .content {
+//     grid-area: content;
+//   }
+//   .main-nav {
+//     grid-area: nav;
+//     border: 1px solid green;
+//     height: 500px;
+//   }
+//   .side {
+//     grid-area: sidebar;
+//     border: 1px solid green;
+//     height: 500px;
+//   }
+//   .ad {
+//     grid-area: ad;
+//   }
+//   .main-footer {
+//     grid-area: footer;
+//   }
+//   .wrapper {
+//     display: grid;
+//     grid-gap: 20px;
+//     grid-template-areas: 
+//       "header"
+//       "nav"
+//       "content"
+//       "sidebar";
+//   }
+
+//   @media (min-width: 700px) {
+//     .wrapper {
+//       grid-template-columns: 1fr 4fr 1fr;
+//       grid-template-areas: 
+//         "header header  header"
+//         "nav    content sidebar"
+//         "nav    content ad"
+//         "footer footer  footer"
+//      }
+//      nav ul {
+//        flex-direction: column;
+//      }
+//   }

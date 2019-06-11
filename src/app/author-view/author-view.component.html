@@ -1,0 +1,65 @@
+<div class="containers" style="border: 2px solid green;">
+  <table class="width_full">
+    <tr>
+      <td style="border-right: 2px solid #003172;">
+        <p class="author-head authoer-head-p">SURFACE VEHICLE RECOMMENDED PRACTICE</p>
+        <table class="width_full">
+          <tr>
+            <td class="auther-id-size">J1647_201505</td>
+            <td class="auther-id-size">
+              Plastic Materials and Coatings for Use In or On Optical Parts Such
+              as Lenses and Reflectors of High-Intensity Discharge Forward
+              Lighting Devices Used in Motor Vehicles
+            </td>
+            <!-- <div class="col-md-1 ml-auto padleftright"> -->
+            <!-- <div class="dropdown dropdownwrap">
+                <button
+                  type="button"
+                  class="btn btn-primary dropdown-toggle dropdownbtn"
+                  data-toggle="dropdown"
+                >
+                  <i class="fa fa-ellipsis-v"></i>
+                </button>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" (click)="uploadDoc()"><i class="fa fa-upload"></i>Upload section</a>
+                  <a class="dropdown-item" href="#" ><i class="fa fa-download"></i>Download section</a>
+                  <a class="dropdown-item" href="#" ><i class="fa fa-thumbs-up"></i> Reader View</a>
+                  <a class="dropdown-item" href="#" (click)='printPage()'><i class="material-icons" style="color:blue">
+                    print
+                    </i>Print Section</a>
+                    this is the print medthod 2
+                    <div id="print-section">
+                        // your html stuff that you want to print
+                      </div>
+                      <button (click)="print()">print</button>
+                </div>
+              </div> -->
+            <!-- </div> -->
+            <td class="menu-print-options">
+              <mat-icon class="more_icons" [matMenuTriggerFor]="menu">more_vert</mat-icon>
+              <mat-menu #menu="matMenu">
+                <button mat-menu-item (click)="uploadDoc()"><i class="fa fa-upload"></i> Upload section</button>
+                <button mat-menu-item><i class="fa fa-download"></i> Download section</button>
+                <button mat-menu-item><i class="fa fa-thumbs-up"></i> Reader View</button>
+                <button mat-menu-item>Print Section</button>
+              </mat-menu>
+            </td>
+          </tr>
+          <tr>
+            <td class="font-italic"><small>Revision</small></td>
+            <td class="font-italic">
+              <small>A</small>
+              <small class="margin-left-f">Project Initiation: <span>2015-06-02</span></small>
+            </td>
+            <td></td>
+          </tr>
+        </table>
+      </td>
+
+      <td class="user-icon-space">
+        <span>User</span><br>
+        <mat-icon>account_circle</mat-icon>
+      </td>
+    </tr>
+  </table>
+</div>

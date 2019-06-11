@@ -1,0 +1,117 @@
+<mat-card class="example-card" id="0">
+  <mat-card-header>
+    <mat-card-title>
+      <div class="container">
+        <div class="col11">
+          <span class="roundtext">1</span>
+        </div>
+        <div class="col12">
+          <span class="ml-1">{{ heading }}</span>
+        </div>
+        <div class="col13">
+          <mat-icon class="more_icons" [matMenuTriggerFor]="menuCk">more_vert</mat-icon>
+          <mat-menu #menuCk="matMenu">
+            <button mat-menu-item><i class="fa fa-upload"></i> Upload section</button>
+            <button mat-menu-item><i class="fa fa-download"></i> Download section</button>
+            <button mat-menu-item (click)="printPage()">Print Section</button>
+          </mat-menu>
+        </div>
+      </div>
+      <!-- <div class="row">
+        <div class="col-md-1 padleftright">
+          <span class="roundtext">1</span>
+        </div>
+        <div class="col-md-9">
+          <span class="ml-1">{{ heading }}</span>
+        </div>
+        <div class="col-md-1 ml-auto padleftright">
+          <mat-icon class="more_icons" [matMenuTriggerFor]="menuCk">more_vert</mat-icon>
+          <mat-menu #menuCk="matMenu">
+            <button mat-menu-item><i class="fa fa-upload"></i> Upload section</button>
+            <button mat-menu-item><i class="fa fa-download"></i> Download section</button>
+            <button mat-menu-item (click)="printPage()">Print Section</button>
+          </mat-menu>
+        </div>
+      </div> -->
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <div class="container">
+      <div class="col21">
+        <ckeditor [(ngModel)]="model.editorData" (change)="checkChange($event)" [editor]="Editor"></ckeditor>
+      </div>
+    </div>
+  </mat-card-content>
+  <mat-card-actions>
+    <div class="row">
+      <div class="col-8">
+        {{ myDate }}
+      </div>
+      <div class="col-4">
+        <button mat-raised-button color="primary" (click)="getVersionSavedData()">
+          Save Version
+        </button>
+        <button mat-raised-button color="primary">Submit for Approval</button>
+      </div>
+    </div>
+  </mat-card-actions>
+</mat-card>
+
+<mat-card class="example-card" id="1">
+  <mat-card-header>
+    <mat-card-title>
+      <div class="container">
+        <div class="col11">
+          <span class="roundtext">1</span>
+        </div>
+        <div class="col12">
+          <span class="ml-1">{{ heading }} Second</span>
+        </div>
+        <div class="col13">
+          <mat-icon class="more_icons" [matMenuTriggerFor]="menuCk">more_vert</mat-icon>
+          <mat-menu #menuCk="matMenu">
+            <button mat-menu-item><i class="fa fa-upload"></i> Upload section</button>
+            <button mat-menu-item><i class="fa fa-download"></i> Download section</button>
+            <button mat-menu-item (click)="printPage()">Print Section</button>
+          </mat-menu>
+        </div>
+      </div>
+      <!-- <div class="row">
+        <div class="col-md-1 padleftright">
+          <span class="roundtext">1</span>
+        </div>
+        <div class="col-md-9">
+          <span class="ml-1">{{ heading }}</span>
+        </div>
+        <div class="col-md-1 ml-auto padleftright">
+          <mat-icon class="more_icons" [matMenuTriggerFor]="menuCk">more_vert</mat-icon>
+          <mat-menu #menuCk="matMenu">
+            <button mat-menu-item><i class="fa fa-upload"></i> Upload section</button>
+            <button mat-menu-item><i class="fa fa-download"></i> Download section</button>
+            <button mat-menu-item (click)="printPage()">Print Section</button>
+          </mat-menu>
+        </div>
+      </div> -->
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <div class="container">
+      <div class="col21">
+        <ckeditor [(ngModel)]="model.editorData" (change)="checkChange($event)" [editor]="Editor"></ckeditor>
+      </div>
+    </div>
+  </mat-card-content>
+  <mat-card-actions>
+    <div class="row">
+      <div class="col-8">
+        {{ myDate }}
+      </div>
+      <div class="col-4">
+        <button mat-raised-button color="primary" (click)="getVersionSavedData()">
+          Save Version
+        </button>
+        <button mat-raised-button color="primary">Submit for Approval</button>
+      </div>
+    </div>
+  </mat-card-actions>
+</mat-card>

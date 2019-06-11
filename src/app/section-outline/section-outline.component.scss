@@ -1,0 +1,125 @@
+.example-container {
+    position: absolute;
+  top: 115px;
+  bottom: 35px;
+  left: 0;
+  right: 0;
+  background-color: transparent;
+  overflow-y: hidden;
+//   border-right: 1px solid #003172;
+}
+
+.openCloseButton {
+    background-color: #005195;
+    color: #fff;
+    position: absolute;
+    bottom: 35px;
+    z-index: 100;
+    width: 82px;
+    border-radius: 0px;
+}
+
+.sideNavMainStyle {
+    background-color: #005195;
+    margin-top: -20px;
+    height: 500px;
+}
+
+.marginZero {
+    margin-bottom: 0px;
+  }
+
+  .number-round-style {
+      background-color: #fff;
+      border-radius: 50%;
+      padding: 10px 15px;
+      color: #000000!important;
+  }
+
+  .table-custom-section {
+      width: 100%;
+  }
+
+.text-center {
+    text-align: center;
+}
+
+table.table-custom-section>tr,td {
+    // padding: 8px;
+    color: #fff;
+}
+
+.vertical-line-style {
+    position: absolute;
+    height: 40px;
+    width: 2px;
+    background-color: #fff;
+    left: 25px;
+    margin-top: 45px;
+}
+
+.vertical-line-style-not {
+    position: absolute;
+    height: 40px;
+    width: 2px;
+    background-color: #fff;
+    left: 47px;
+    margin-top: 30px;
+}
+
+.seciontHeading {
+    color: #fff;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 5px;
+}
+
+.number-td {
+    height: 70px;
+}
+
+.number-round-style-not {
+    background-color: #fff;
+    border-radius: 50%;
+    padding: 10px 15px;
+    color: #000000!important;
+}
+
+.paddingTen {
+    padding: 10px;
+}
+
+::ng-deep.mat-drawer-inner-container {
+    overflow: hidden;
+}
+// steps style
+.node {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    display:inline-block;
+    transition: all 1000ms ease;
+}
+
+.activated {
+    box-shadow: 0px 0px 3px 2px rgba(194, 255, 194, 0.8);
+}
+
+.divider {
+    height: 40px;
+    width: 2px;
+    margin-left: 14px;
+    transition: all 800ms ease;
+}
+
+li p {
+    display:inline-block;
+    margin-left: 25px;
+}
+
+li {
+    list-style: none;
+    line-height: 1px;
+}
+
+.green{ background-color: rgba(92, 184, 92, 1); }
+.grey { background-color: rgba(201, 201, 201, 1); }
